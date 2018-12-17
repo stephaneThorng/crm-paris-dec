@@ -9,7 +9,7 @@ import { UiModule } from './ui/ui.module';
     AppComponent
   ],
   imports: [
-    BrowserModule, UiModule, NgbModule
+    BrowserModule, UiModule, NgbModule, NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
