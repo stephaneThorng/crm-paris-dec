@@ -1,0 +1,6 @@
+
+Jour 2:
+  ✔ LoginRoutingModule pour la route login @started(18-12-18 11:39) @done(18-12-18 11:44) @lasted(5m6s)
+  ✔ ClientRoutingModule pour la route clients (ex PrestationsRouting) @started(18-12-18 11:44) @done(18-12-18 11:50) @lasted(6m26s)
+  ✔ PageNotFoundRouting pour la route ** (ex PrestationsRouting) @done(18-12-18 11:50)
+
