@@ -7,5 +7,12 @@ export const fakePrestation: Prestation[] = [
     client: 'Modis',
     nbJours: 10,
     comment: 'Il est bien le prof'
-  })
+  }),
+  new Prestation({
+    id: 'firebaseIdEstQueEnString',
+    typePresta: 'Coaching',
+    client: 'Capgemini',
+    nbJours: 12,
+    comment: 'Il est bien Abder'
+  }),
 ];

@@ -1,0 +1,24 @@
+@import '~src/variables';
+
+//On rajoute l'id tab pour apporter du poid (très dur d'ovverider via le style.css)
+#tab .state-option {
+    background: $palette-color-three;
+}
+
+#tab .state-annule, #tab .state-inactif {
+  background: $palette-color-two;
+}
+
+#tab .state-confirme, #tab .state-actif {
+  background: $palette-color-four;
+}
+
+//Overrider pour customiser un composant
+app-list-prestations #tab thead {
+  background: $dark-color;
+  color: $light-color;
+}
+
+#tab tbody > * {
+  display: contents;
+}

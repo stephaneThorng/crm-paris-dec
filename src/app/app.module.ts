@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
+import { TotalPipe } from './shared/pipes/total.pipe';
 
 // the second parameter 'fr' is optional
 registerLocaleData(localeFr, 'fr');
