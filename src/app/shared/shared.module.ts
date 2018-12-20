@@ -8,15 +8,16 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StateClientDirective } from './directives/state-client.directive';
 import { TemplatesModule } from '../templates/templates.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TotalPipe, StateDirective, TableauComponent, AddRowComponent, StateClientDirective],
-  exports: [TotalPipe, StateDirective, TableauComponent, AddRowComponent, TemplatesModule],
+  exports: [TotalPipe, StateDirective, TableauComponent, AddRowComponent, TemplatesModule, ReactiveFormsModule],
   imports: [
     CommonModule,
     RouterModule,
     FontAwesomeModule,
-    TemplatesModule
+    TemplatesModule, ReactiveFormsModule
   ]
 })
 export class SharedModule { }

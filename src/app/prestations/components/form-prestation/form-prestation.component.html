@@ -1,0 +1,36 @@
+<div class="container">
+  <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="type">Type</label>
+      <input type="text" formControlName="typePresta" class="form-control" id="type" />
+    </div>
+    <div class="form-group">
+      <label for="client">Client</label>
+      <input type="text" formControlName="client" class="form-control" id="client" />
+    </div>
+    <div class="form-group">
+      <label for="nbjours">nbjours</label>
+      <input type="number" formControlName="nbJours" class="form-control" id="nbjours" />
+    </div>
+    <div class="form-group">
+      <label for="tjmHt">tjmHt</label>
+      <input type="number" formControlName="tjmHt" class="form-control" id="tjmHt" />
+    </div>
+    <div class="form-group">
+      <label for="tva">tva</label>
+      <input type="number" formControlName="tauxTva" class="form-control" id="tva" />
+    </div>
+    <div class="form-group">
+      <label for="state">state</label>
+      <select formControlNam="state" class="form-control" id="state" >
+        <option *ngFor="let state of states" value="state">  {{ state }} </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+        <label for="comment">comment</label>
+        <textarea formControleName="comment" class="form-control" id="comment" > {{ form.get('comment').value }}</textarea>
+      </div>
+    <button type="submit"  [disabled]="form.invalid" class="btn btn-primary">Submit</button>
+  </form>
+</div>
