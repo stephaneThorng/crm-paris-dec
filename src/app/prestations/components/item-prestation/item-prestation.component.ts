@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { State } from 'src/app/shared/enums/state.enum';
 import { PrestationService } from '../../services/prestation.service';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-item-prestation',
@@ -11,6 +12,8 @@ import { PrestationService } from '../../services/prestation.service';
 export class ItemPrestationComponent implements OnInit {
 
   public states = State;
+
+  public faTrashAlt = faTrashAlt;
 
   @Input()
   public item: Prestation;
@@ -22,7 +25,27 @@ export class ItemPrestationComponent implements OnInit {
 
   public changeState(event) {
     const state = event.target.value;
-    this.ps.update(this.item, state);
+    this.ps.update(this.item, state).then( () => {
+      // traiter reponse
+    });
+    // Via requete Http
+    // this.ps.update(this.item, state).subscribe( (data) => {
+    //   // traiter reponse
+    // });
     console.log(state);
+  }
+
+  public delete() {
+    this.ps.delete(this.item).then( ()  => {
+      // this.router.navigate(['../'], {relativeTo: this.route});
+    });
+    // this.ps.delete(this.item).subscribe( (data)  => {
+    //   // this.router.navigate(['../'], {relativeTo: this.route});
+    // });
+  }
+
+  public detail() {
+    this.ps.presta$.next(this.item);
+    console.log(this.ps.presta$.value);
   }
 }

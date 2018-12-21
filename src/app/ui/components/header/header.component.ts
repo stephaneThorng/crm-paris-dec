@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.title = 'my app';
+    this.title = 'CRM-PARIS-DEC';
   }
 
 

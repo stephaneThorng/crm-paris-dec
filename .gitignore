@@ -7,7 +7,7 @@
 
 # dependencies
 /node_modules
-
+/src/environments/environment.firebase.ts
 # profiling files
 chrome-profiler-events.json
 speed-measure-plugin.json

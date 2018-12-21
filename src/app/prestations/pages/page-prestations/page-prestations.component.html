@@ -1,3 +1,19 @@
 <app-template-a title="prestations">
   <app-list-prestations></app-list-prestations>
 </app-template-a>
+
+<ul class="nav">
+  <li class="nav-item">
+    <a
+      class="nav-link" [routerLink]="['detail']"
+      routerLinkActive="router-link-active">Détail
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['comment']"
+      routerLinkActive="router-link-active" >
+      Comment
+    </a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

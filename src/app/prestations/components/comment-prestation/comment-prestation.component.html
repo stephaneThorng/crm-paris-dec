@@ -1,0 +1,12 @@
+<!-- <div class="container">
+    <ul *ngIf="presta$ | async as presta" >
+        <li></li>
+    </ul>
+  </div> -->
+
+
+  <div class="card" *ngIf="presta$ | async as presta">
+      <div class="card-body">
+          {{ presta.comment }}
+      </div>
+  </div>

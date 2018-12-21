@@ -1,4 +1,4 @@
 <app-tableau [headers]="headers">
-    <app-item-prestation *ngFor="let data of collection" [item]="data" ></app-item-prestation>
+    <app-item-prestation *ngFor="let data of collection$ | async" [item]="data" ></app-item-prestation>
 </app-tableau>
 <app-add-row txt="Ajouter une prestation" ></app-add-row>
